@@ -35,6 +35,10 @@ public class ContabilidadeService {
         return rep.findNivel(nivel).stream().map(ContabilidadeDTO::create).collect(Collectors.toList());
     }
 
+    public List<ContabilidadeDTO> getId(Long id) {
+        return rep.findId(id).stream().map(ContabilidadeDTO::create).collect(Collectors.toList());
+    }
+
 
     public ContabilidadeDTO insert(Contabilidade contabilidade) {
         Assert.isNull(contabilidade.getId(),"Não foi possível inserir o registro");

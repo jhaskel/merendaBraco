@@ -37,6 +37,8 @@ public class AfService {
     }
 
 
+
+
     public List<AfDTO> getDespesa(Boolean isdespesa) {
         return rep.findDespesa(isdespesa).stream().map(AfDTO::create).collect(Collectors.toList());
     }
@@ -86,7 +88,8 @@ public class AfService {
             db.setIsativo(af.getIsativo());
             db.setIsdespesa(af.getIsdespesa());
             db.setDespesa(af.getDespesa());
-            db.setDespesax(af.getDespesax());
+            db.setCoddespesa(af.getCoddespesa());
+            db.setCodedespesa(af.getCodedespesa());
             db.setSetor(af.getSetor());
             db.setNivel(af.getNivel());
             db.setCreatedAt(af.getCreatedAt());

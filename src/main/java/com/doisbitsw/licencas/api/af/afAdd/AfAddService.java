@@ -51,7 +51,8 @@ public class AfAddService {
             db.setCreatedAt(afAdd.getCreatedAt());
             db.setIsativo(afAdd.getIsativo());
             db.setDespesa(afAdd.getDespesa());
-            db.setDespesax(afAdd.getDespesax());
+            db.setCoddespesa(afAdd.getCoddespesa());
+            db.setCodedespesa(afAdd.getCodedespesa());
             db.setIsdespesa(afAdd.getIsdespesa());
             db.setEmpenho(afAdd.getEmpenho());
             db.setLicitacao(afAdd.getLicitacao());

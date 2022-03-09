@@ -15,7 +15,8 @@ public class AfDTO {
     private String createdAt;
     private Boolean isativo;
     private Long despesa;
-    private Long despesax;
+    private Long coddespesa;
+    private Long codedespesa;
     private Boolean isdespesa;
     private String processo;
     private String empenho;

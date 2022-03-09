@@ -27,7 +27,8 @@ public class AfAdd {
     private String processo;
     private Boolean isativo;
     private Long despesa;
-    private Long despesax;
+    private Long coddespesa;
+    private Long codedespesa;
     private Boolean isdespesa;
     private Long licitacao;
 

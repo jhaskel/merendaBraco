@@ -18,7 +18,8 @@ public class Af {
     private Long id;
     private Long code;
     private Long despesa;
-    private Long despesax;
+    private Long coddespesa;
+    private Long codedespesa;
     private Long setor;
     private Long nivel;
     private Long fornecedor;

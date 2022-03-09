@@ -16,6 +16,9 @@ public interface ContabilidadeRepository extends JpaRepository<Contabilidade, Lo
     @Query(value = "SELECT * FROM contabilidade WHERE nivel = :nivel and isativo = true  ", nativeQuery = true)
     List<Contabilidade> findNivel(Long nivel);
 
+    @Query(value = "SELECT * FROM contabilidade WHERE id = :id and isativo = true  ", nativeQuery = true)
+    List<Contabilidade> findId(Long id);
+
 
 
 }

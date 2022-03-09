@@ -30,7 +30,6 @@ public class AfController {
     }
 
 
-
     //busca as af por fornecedores
     @GetMapping("/fornecedor/{fornecedor}")
     public ResponseEntity getByFornecedor(@PathVariable("fornecedor") Long fornecedor) {
@@ -39,6 +38,8 @@ public class AfController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(afs);
     }
+
+
 
 
     //busca as af quando se tem ou não despesa
