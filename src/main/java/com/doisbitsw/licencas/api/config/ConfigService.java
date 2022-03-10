@@ -42,6 +42,11 @@ public class ConfigService {
             // Copiar as propriedades
             db.setEntidade(config.getEntidade());
             db.setNomeContato(config.getNomeContato());
+            db.setCargo(config.getCargo());
+            db.setEmail(config.getEmail());
+            db.setEntidade(config.getEntidade());
+            db.setSetor(config.getSetor());
+            db.setModified(config.getModified());
             System.out.println("Carro id " + db.getId());
 
             // Atualiza o carro

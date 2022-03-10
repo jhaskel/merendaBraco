@@ -290,6 +290,7 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
             "            ORDER BY tot desc", nativeQuery = true)
     List<Itens> findProduto(Long produto);
 
+
     @Query(value = "SELECT ite.*,SUM(ite.quantidade) AS tot ,esc.alias AS nomec\n" +
             "from itens ite \n" +
             "INNER join estoque pro ON pro.produto = ite.produto\n" +
