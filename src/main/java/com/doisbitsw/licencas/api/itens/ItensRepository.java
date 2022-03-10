@@ -292,7 +292,7 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
 
     @Query(value = "SELECT ite.*,SUM(ite.quantidade) AS tot ,esc.alias AS nomec\n" +
             "from itens ite \n" +
-            "INNER join estoque pro ON pro.id = ite.produto\n" +
+            "INNER join estoque pro ON pro.produto = ite.produto\n" +
             "INNER JOIN unidade_escolar esc ON esc.id = ite.escola\n" +
             "WHERE ite.produto = :produto and ite.af > 0 AND ite.licitacao = :licitacao\n" +
             "GROUP BY ite.escola\n" +
