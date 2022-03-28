@@ -37,6 +37,8 @@ public class EstoqueAddService {
             db.setCategoria(estoqueAdd.getCategoria());
             db.setFornecedor(estoqueAdd.getFornecedor());
             db.setQuantidade(estoqueAdd.getQuantidade());
+            db.setLicitacao(estoqueAdd.getLicitacao());
+            db.setProcesso(estoqueAdd.getProcesso());
             db.setAgrofamiliar(estoqueAdd.getAgrofamiliar());
             db.setAno(estoqueAdd.getAno());
             db.setModifiedAt(estoqueAdd.getModifiedAt());
