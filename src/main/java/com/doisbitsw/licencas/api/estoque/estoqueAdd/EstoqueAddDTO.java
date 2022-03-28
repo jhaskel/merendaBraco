@@ -10,15 +10,15 @@ public class EstoqueAddDTO {
     private Long setor;
     private Long code;
     private String alias;
+    private Long fornecedor;
     private String nomeproduto;
     private Double quantidade;
+    private Double valor;
     private String unidade;
+    private String processo;
     private Long categoria;
     private Long licitacao;
-    private String processo;
-    private Long fornecedor;
     private Boolean agrofamiliar;
-    private Double valor;
     private Long ano;
     private String createdAt;
     private Boolean isativo;

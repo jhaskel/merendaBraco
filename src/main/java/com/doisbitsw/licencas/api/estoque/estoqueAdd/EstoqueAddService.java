@@ -32,7 +32,6 @@ public class EstoqueAddService {
             // Copiar as propriedades
             db.setCode(estoqueAdd.getCode());
             db.setAlias(estoqueAdd.getAlias());
-            db.setAlias(estoqueAdd.getAlias());
             db.setUnidade(estoqueAdd.getUnidade());
             db.setCategoria(estoqueAdd.getCategoria());
             db.setFornecedor(estoqueAdd.getFornecedor());
