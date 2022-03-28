@@ -25,7 +25,7 @@ public class EstoqueAdd {
     private String unidade;
     private Long categoria;
     private Long licitacao;
-    private Long processo;
+    private String processo;
     private Long fornecedor;
     private Boolean agrofamiliar;
     private Double valor;
