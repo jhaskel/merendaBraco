@@ -26,7 +26,7 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
             "WHERE p.isativo = TRUE AND lic.isativo = TRUE and cat.isativo = true and p.id NOT IN (SELECT produto FROM itens ite\n" +
             "INNER JOIN pedido ped ON ped.id = ite.pedido            \n" +
             "WHERE ite.escola = :local AND ped.isaf = TRUE)\n" +
-            "ORDER BY p.isativo,p.categoria,p.agrofamiliar,p.alias ", nativeQuery = true)
+            "ORDER BY p.isativo,p.categoria,p.agrofamiliar,p.alias", nativeQuery = true)
     List<Estoque> findByEcola(Long local);
 
 
