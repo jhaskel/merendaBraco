@@ -21,9 +21,11 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
 
 
     @Query(value = "SELECT * FROM estoque p \n" +
-            "INNER JOIN categoria cat ON cat.id = p.categoria \n" +
-            "WHERE p.isativo = TRUE AND cat.isativo = true and p.id NOT IN (SELECT produto FROM itens ite\n" +
-            "INNER JOIN pedido ped ON ped.id = ite.pedido WHERE ite.escola = :local AND ped.isaf = TRUE) \n" +
+            "INNER JOIN categoria cat ON cat.id = p.categoria\n" +
+            "INNER JOIN licitacao lic ON lic.id = p.licitacao \n" +
+            "WHERE p.isativo = TRUE AND lic.isativo = TRUE and cat.isativo = true and p.id NOT IN (SELECT produto FROM itens ite\n" +
+            "INNER JOIN pedido ped ON ped.id = ite.pedido            \n" +
+            "WHERE ite.escola = :local AND ped.isaf = TRUE)\n" +
             "ORDER BY p.isativo,p.categoria,p.agrofamiliar,p.alias ", nativeQuery = true)
     List<Estoque> findByEcola(Long local);
 
