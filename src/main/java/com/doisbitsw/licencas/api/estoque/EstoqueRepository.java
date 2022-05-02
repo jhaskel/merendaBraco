@@ -36,7 +36,7 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
             "INNER JOIN fornecedor forn ON forn.id = est.fornecedor\n" +
             "WHERE est.setor = :setor and sub.isativo = true  and cat.isativo = true AND forn.isativo=true AND est.isativo = true\n" +
             "GROUP BY est.id\n" +
-            "ORDER BY est.isativo DESC,est.categoria,est.alias", nativeQuery = true)
+            "ORDER BY est.isativo DESC,est.agrofamiliar desc,est.categoria,est.alias", nativeQuery = true)
     List<Estoque> findEstoqueByUnidade(Long setor);
 
     @Query(value = "SELECT est.*,SUM(ite.quantidade) AS comprado,cat.nome as nomecategoria,forn.alias as nomelicitacao\n" +
